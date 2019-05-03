@@ -3,6 +3,7 @@ from PIL import Image
 import os
 
 
+
 def _add_thumb(s):
     """
     Modifies a string (filename, URL) containing an image filename, to insert
