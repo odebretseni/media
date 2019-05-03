@@ -1,0 +1,53 @@
+<!DOCTYPE html>
+{% load staticfiles %}
+<html>
+    <head>
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap.min.css">
+        <link rel="stylesheet" href="//maxcdn.bootstrapcdn.com/bootstrap/3.2.0/css/bootstrap-theme.min.css">
+        <link href='//fonts.googleapis.com/css?family=Lobster&subset=latin,latin-ext' rel='stylesheet' type='text/css'>
+        <meta charset="utf-8" />
+        <link href='styles.css' type='text/css' rel='stylesheet' />
+        <link rel="stylesheet" href="{% static 'css/styles.css' %}">
+        <title>Gallery - {% block title %}{% endblock %}</title>
+        <style type="text/css">
+            body { margin: 10px; font-family: Geneva, Arial, Helvetica, Wendy One, sans-serif; }
+            table { width: 100%; }
+            table th { text-align: center; }
+            a img { border: 2px solid black; }
+            a:hover img {border: 3px solid yellow; }
+            #content { margin: 0 auto 50px; }
+            #footer {
+            left:0px;
+            bottom:0px;
+            height:30px;
+            width:100%; }
+        </style>
+    </head>
+    <body background="{% static 'images/amazing.jpg' %}">
+    <div class="page-header">
+    <h1><a href="/">Gallery</a></h1>
+    <h6 align="right">
+        <ul class="sidebar-nav">
+                {% if user.is_authenticated %}
+                    User: {{ user.get_username }}
+            <a href="{% url 'logout'%}?next={{request.path}}"><h6>Logout</h6></a>
+                {% endif %}
+        </ul>
+        </h6>
+        </div>
+ <div class="text/css">
+       <div class="row">
+<ul>
+     {% block content %}{% endblock %}
+</ul>
+     <div id="footer">
+     <p align="center"><b>&copy; Rio-Trans</b> - 2019</p></div>
+</div>
+    </div>
+     </body>
+</html>
+
+
+
+
+
