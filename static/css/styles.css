@@ -1,0 +1,48 @@
+@import url('https://fonts.googleapis.com/css?family=Pacifico');
+@import url('https://fonts.googleapis.com/css?family=Caveat');
+
+body {
+    padding-left: 45px;
+    background-size: 100%;
+}
+
+h1, h2 {
+    color: #273746;
+    font-family: 'Ubuntu Condensed';
+}
+
+h3 {
+    color: #273746;
+    font-family: 'Pacifico', cursive;
+    font-size: 20pt;
+}
+
+
+.page-header h1, .page-header h1 a, .page-header h1 a:visited, .page-header h1 a:active {
+    color: #273746;
+    font-size: 46pt;
+    font-family: 'Ubuntu Condensed', cursive;
+    text-decoration: none;
+}
+
+h4 {
+    color: #273746;
+    font-size: 21pt;
+    font-family: 'Caveat', cursive;
+}
+
+h5 {
+    color: #273746;
+    font-size: 11pt;
+    font-family: 'Ubuntu Condensed', cursive;
+}
+
+img {
+    boarder: 3px solid #00a8e1;
+}
+
+h6 {
+    color: #273746;
+    font-size: 15pt;
+    font-family: 'Comfortaa';
+}
