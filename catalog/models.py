@@ -5,7 +5,7 @@ from .items import ThumbnailImageField
 
 
 class Item(models.Model):
-    name = models.CharField(max_length=250)
+    name = models.CharField(max_length=250, blank=True)
     description = models.TextField()
 
     class Meta:

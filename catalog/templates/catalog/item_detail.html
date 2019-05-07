@@ -4,17 +4,17 @@
 
 {% block content %}
 
-<p><a href="{% url 'item_list' %}">Назад до переліку альбомів</a></p>
+<h3><p><a href="{% url 'item_list' %}">Назад до переліку альбомів</a></p></h3>
 
 <h2>{{ object.name }}</h2>
-<p>{{ object.description }}</p>
+<p><h3>{{ object.description }}</h3></p>
 
-<h3>Фото</h3>
+<h3></h3>
 <table>
     <tr>
-        <th>Title</th>
-        <th>Thumbnail</th>
-        <th>Caption</th>
+        <th></th>
+        <th></th>
+        <th></th>
     </tr>
     {% for photo in object.photo_set.all %}
     <tr>
