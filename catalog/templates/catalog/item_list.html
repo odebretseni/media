@@ -4,15 +4,15 @@
 
 {% block content %}
 
-<p><a href="{% url 'index' %}">Головна сторінка</a></p>
+<h3><p><a href="{% url 'index' %}">Головна сторінка</a></p></h3>
 
-<h2>Items</h2>
+<h2></h2>
 {% if object_list %}
 <table>
     <tr>
-        <th>Name</th>
-        <th>Sample Thumb</th>
-        <th>Description</th>
+        <th></th>
+        <th></th>
+        <th></th>
     </tr>
     {% for item in object_list %}
     <tr>
@@ -26,7 +26,7 @@
             (No photos currently uploaded)
             {% endif %}
         </td>
-        <td>{{ item.description }}</td>
+        <td><h3>{{ item.description }}</h3></td>
     </tr>
     {% endfor %}
 </table>
