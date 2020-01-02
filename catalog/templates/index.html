@@ -33,9 +33,9 @@
         <hr>
     {% for item in item_list|slice:":3" %}
         <td>
-            <a href="{{ item.get_absolute_url }}"><b><h5>{{ item.name }}</h5></b><br />
+            <a href="{{ item.get_absolute_url }}"><b><h5></h5></b><br />
             {% if item.photo_set.count %}
-                <img src="{{ item.photo_set.all.0.image.thumb_url }}" />
+               <div class="center"><img src="{{ item.photo_set.all.0.image.thumb_url }}" /></div>
             {% else %}
                 <span>No photos (yet)</span>
             {% endif %}

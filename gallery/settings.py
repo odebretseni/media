@@ -23,7 +23,7 @@ BASE_DIR = os.path.dirname(os.path.dirname(os.path.abspath(__file__)))
 SECRET_KEY = 'jz7ww536#d_l#ij$=#4xn&f7si%(b&qcs=-q(7oq49u-%^uv4)'
 
 # SECURITY WARNING: don't run with debug turned on in production!
-DEBUG = False
+DEBUG = True
 
 ALLOWED_HOSTS = ["*"]
 
@@ -154,4 +154,7 @@ EMAIL_HOST_PASSWORD = 'aef59bFd3'
 
 DEFAULT_FROM_EMAIL = 'media@rio-trans.com'
 
+DATA_UPLOAD_MAX_NUMBER_FIELDS = 10240
+
+LOAD_TRUNCATED_IMAGES = True
 

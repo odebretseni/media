@@ -13,24 +13,38 @@
             body { margin: 10px; font-family: Geneva, Arial, Helvetica, Wendy One, sans-serif; }
             table { width: 100%; }
             table th { text-align: center; }
-            a img { border: 2px solid black; }
-            a:hover img {border: 3px solid yellow; }
+            
+            
             #content { margin: 0 auto 50px; }
             #footer {
+            position: fixed;
             left:0px;
             bottom:0px;
             height:30px;
             width:100%; }
+		
+	   table{
+            margin: 50px 0;
+            text-align: left;
+            border-collapse: separate;
+            border: none;
+            border-spacing: 10px;}
+
+	    #preview {
+            float: left;
+            width: 30%;
+            margin: 0px 1% 1%;
+            } 
         </style>
     </head>
     <body background="{% static 'images/amazing.jpg' %}">
     <div class="page-header">
-    <h1><a href="/">Gallery</a></h1>
+    <a href="/"><p><img src="{% static 'images/logo.png' %}" width="250" height="60"></a></p>
     <h6 align="right">
         <ul class="sidebar-nav">
                 {% if user.is_authenticated %}
                     User: {{ user.get_username }}
-            <a href="{% url 'logout'%}?next={{request.path}}"><h6>Logout</h6></a>
+            <p><a href="{% url 'logout'%}?next={{request.path}}"><h6>Logout</h6></a></p>
                 {% endif %}
         </ul>
         </h6>
@@ -41,7 +55,7 @@
      {% block content %}{% endblock %}
 </ul>
      <div id="footer">
-     <p align="center"><b>&copy; Rio-Trans</b> - 2019</p></div>
+     <p align="center"><b>&copy; Rio-Trans</b> - 2020</p></div>
 </div>
     </div>
      </body>

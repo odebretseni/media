@@ -1,7 +1,9 @@
 from django.db.models.fields.files import ImageField, ImageFieldFile
 from PIL import Image
+from PIL import ImageFile
 import os
 
+ImageFile.LOAD_TRUNCATED_IMAGES = True
 
 def _add_thumb(s):
     """

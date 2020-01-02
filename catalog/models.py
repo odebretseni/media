@@ -1,3 +1,4 @@
+# -*- coding: utf-8 -*-
 from django.db import models
 from django.contrib import admin
 from django.urls import reverse
@@ -9,8 +10,7 @@ class Item(models.Model):
     description = models.TextField()
 
     class Meta:
-        ordering = ['name']
-
+        ordering = ['id', 'name']
     def __str__(self):
         return self.name
 
@@ -41,7 +41,7 @@ class PhotoInline(admin.StackedInline):
 class ItemAdmin(admin.ModelAdmin):
     inlines = [PhotoInline]
     list_display = ("name", "description")
-
+    ordering = ['id', 'name']
 
 class PhotoAdmin(admin.ModelAdmin):
     list_display = ('item', "title")

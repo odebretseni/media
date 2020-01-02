@@ -6,27 +6,24 @@
 
 <h3><p><a href="{% url 'item_list' %}">Назад до переліку альбомів</a></p></h3>
 
-<h2>{{ object.name }}</h2>
+<h2></h2>
 <p><h3>{{ object.description }}</h3></p>
 
 <h3></h3>
-<table>
-    <tr>
-        <th></th>
-        <th></th>
-        <th></th>
-    </tr>
+
     {% for photo in object.photo_set.all %}
-    <tr>
+    <th>
         <td><i>{{ photo.title }}</i></td>
-        <td>
+         <p><td>
             <a href="{{ photo.get_absolute_url }}">
-                <img src="{{ photo.image.thumb_url }}" />
+               <article id="preview">
+              <img src="{{ photo.image.thumb_url }}" />
+                    </article>
             </a>
-        </td>
+        </td></p>
         <td>{{ photo.caption }}</td>
-    </tr>
+    </th>
+
     {% endfor %}
-</table>
 
 {% endblock %}
